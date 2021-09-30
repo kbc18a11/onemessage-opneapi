@@ -1,0 +1,9 @@
+type: object
+description: 初期登録時のユーザー情報
+required:
+  - displayName
+properties:
+  displayName:
+    description: ニックネーム
+    type: string
+    maxLength: 20

@@ -1,0 +1,14 @@
+type: object
+description: ユーザー情報
+required:
+  - id
+  - displayName
+properties:
+  id:
+    description: ID
+    type: string
+    format: uuid
+  displayName:
+    description: ニックネーム
+    type: string
+    maxLength: 20
