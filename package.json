@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clientGenerate": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -i opneapi.yaml -o ./api",
+    "clientGenerate": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -i opneapi.yaml -o ./apiclient",
     "apiMock": "npx prism mock ./opneapi.yaml -p 4000 -d"
   },
   "keywords": [],

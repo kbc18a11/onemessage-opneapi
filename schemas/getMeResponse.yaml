@@ -11,4 +11,5 @@ properties:
   displayName:
     description: ニックネーム
     type: string
-    maxLength: 20
+    minLength: 1
+    maxLength: 32
