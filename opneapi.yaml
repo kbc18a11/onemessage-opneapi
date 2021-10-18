@@ -28,11 +28,6 @@ paths:
       responses:
         "200":
           description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                $ref: "./schemas/getMeResponse.yaml"
         "400":
           description: Bad Request
         "401":
