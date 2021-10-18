@@ -1,0 +1,17 @@
+type: object
+description: 初期登録時のユーザー情報
+required:
+  - email
+  - password
+properties:
+  email:
+    description: メールアドレス
+    type: string
+    minLength: 1
+    maxLength: 255
+    format: email
+  password:
+    description: パスワード
+    type: string
+    minLength: 8
+    pattern: "^[a-zA-Z0-9.?/-]{8,}$"

@@ -8,8 +8,37 @@ servers:
 tags:
   - name: user
     description: ユーザー関係
-
+  - name: auth
+    description: 認証関係
 paths:
+  /login:
+    post:
+      tags:
+        - auth
+      summary: ログイン
+      description: ログイン
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "./schemas/loginRequest.yaml"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "./schemas/getMeResponse.yaml"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
   /register:
     post:
       tags:
@@ -41,7 +70,7 @@ paths:
       description: ユーザー情報を習得
       operationId: getMe
       security:
-        - jwtAuth: []
+        - Authorization: []
       responses:
         "200":
           description: OK
@@ -58,7 +87,7 @@ paths:
           description: Internal Server Error
 components:
   securitySchemes:
-    jwtAuth:
+    Authorization:
       type: apiKey
       name: Authorization
       in: header
