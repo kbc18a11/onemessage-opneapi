@@ -23,7 +23,6 @@ paths:
         content:
           application/json:
             schema:
-              type: object
               $ref: "./schemas/loginRequest.yaml"
       responses:
         "200":
@@ -46,7 +45,6 @@ paths:
         content:
           application/json:
             schema:
-              type: object
               $ref: "./schemas/createMeRequest.yaml"
       responses:
         "201":
@@ -72,7 +70,6 @@ paths:
           content:
             application/json:
               schema:
-                type: object
                 $ref: "./schemas/getMeResponse.yaml"
         "400":
           description: Bad Request
