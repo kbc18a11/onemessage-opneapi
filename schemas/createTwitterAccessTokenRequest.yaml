@@ -1,0 +1,8 @@
+type: object
+description: OAuth認可用暗証番号
+required:
+  - passwordNumber
+properties:
+  passwordNumber:
+    description: OAuth認可用暗証番号
+    type: number

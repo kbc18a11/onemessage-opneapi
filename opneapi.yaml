@@ -10,6 +10,8 @@ tags:
     description: ユーザー関係
   - name: auth
     description: 認証関係
+  - name: twitter
+    description: twitter関係
 paths:
   /login:
     post:
@@ -71,6 +73,51 @@ paths:
             application/json:
               schema:
                 $ref: "./schemas/getMeResponse.yaml"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
+  /twitter/auth:
+    get:
+      tags:
+        - twitter
+      summary: TwitterのOAuth認可用のURL取得
+      description: TwitterのOAuth認可用のURLを習得
+      operationId: getTwitterAuthUrl
+      security:
+        - Authorization: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "./schemas/getTwitterAuthUrlResponse.yaml"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
+    post:
+      tags:
+        - twitter
+      summary: アクセストークンの登録
+      description: 暗証番号から、OAuth認可を行い、取得したアクセストークンを登録する
+      operationId: createTwitterAccessToken
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./schemas/createTwitterAccessTokenRequest.yaml"
+      security:
+        - Authorization: []
+      responses:
+        "201":
+          description: OK
         "400":
           description: Bad Request
         "401":

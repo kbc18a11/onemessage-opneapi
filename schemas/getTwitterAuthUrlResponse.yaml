@@ -1,0 +1,8 @@
+type: object
+description: TwitterのOAuth認可用のURL
+required:
+  - authUrl
+properties:
+  authUrl:
+    description: ID
+    type: string
