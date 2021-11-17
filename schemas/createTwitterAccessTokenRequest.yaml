@@ -1,8 +1,11 @@
 type: object
-description: OAuth認可用暗証番号
+description: Twitterのアクセストークン
 required:
-  - passwordNumber
+  - accessToken
 properties:
-  passwordNumber:
-    description: OAuth認可用暗証番号
-    type: number
+  accessToken:
+    description: Twitterのアクセストークン
+    type: string
+  secretKey:
+    description: Twitterのアクセス用秘密鍵
+    type: string
