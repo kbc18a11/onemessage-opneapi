@@ -5,3 +5,5 @@ docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
     -g spring \
     --additional-properties interfaceOnly \
     -o /local/springcode
+
+chmod 777 -R springcode
