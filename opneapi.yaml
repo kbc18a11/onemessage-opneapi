@@ -79,7 +79,7 @@ paths:
           description: Unauthorized
         "500":
           description: Internal Server Error
-  /user/{userId}/twitter:
+  /twitter/account:
     get:
       tags:
         - twitter
@@ -88,13 +88,6 @@ paths:
       operationId: getTwitterAccount
       security:
         - Authorization: []
-      parameters:
-        - name: userId
-          description: ユーザーID
-          in: path
-          required: true
-          schema:
-            type: string
       responses:
         "200":
           description: OK
