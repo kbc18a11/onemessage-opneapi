@@ -1,5 +1,5 @@
 type: object
-description: TwitterのOAuth認可用のURL
+description: Twitterのアカウント情報
 required:
   - screenName
   - profileImageURL

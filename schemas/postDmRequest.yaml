@@ -1,0 +1,38 @@
+type: object
+description: DM送信情報
+required:
+  - message
+  - sendingAddresses
+properties:
+  message:
+    description: メッセージ
+    type: string
+    minLength: 1
+    maxLength: 10000
+  sendingAddresses:
+    description: 送信先
+    type: array
+    items:
+      description: プラットフォームごとの送信先一覧
+      type: object
+      required:
+        - platformType
+        - addresses
+      properties:
+        platformType:
+          description: プラットフォームの種類
+          type: string
+          enum:
+            - twitter
+        addresses:
+          description: 送信先一覧
+          type: array
+          items:
+            type: object
+            description: 送信先のユーザー情報
+            required:
+              - id
+            properties:
+              id:
+                description: 送信先のユーザーID
+                type: string

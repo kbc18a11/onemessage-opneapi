@@ -1,0 +1,29 @@
+type: object
+description: Twitterのフォロワー一覧
+required:
+  - followers
+  - total
+properties:
+  total:
+    description: followersの要素数
+    type: integer
+  followers:
+    description: フォロワー一覧
+    type: array
+    items:
+      type: "object"
+      description: フォロワー情報
+      required:
+        - id
+        - screenName
+        - accountUrl
+      properties:
+        id:
+          description: ユーザーID
+          type: integer
+        screenName:
+          description: アカウント名
+          type: string
+        accountUrl:
+          description: アカウントページのURL
+          type: string
