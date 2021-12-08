@@ -5,7 +5,7 @@ required:
   - total
 properties:
   total:
-    description: followersの要素数
+    description: 全てのフォロワー数
     type: integer
   followers:
     description: フォロワー一覧
