@@ -20,7 +20,7 @@ properties:
       properties:
         id:
           description: ユーザーID
-          type: string
+          type: integer
         screenName:
           description: アカウント名
           type: string
