@@ -21,6 +21,7 @@ properties:
         id:
           description: ユーザーID
           type: integer
+          format: int64
         screenName:
           description: アカウント名
           type: string
