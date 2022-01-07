@@ -88,6 +88,8 @@ paths:
       summary: dm送信
       description: dmを送信
       operationId: postDm
+      security:
+        - Authorization: []
       requestBody:
         required: true
         content:
