@@ -253,7 +253,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "./schemas/getCreateAccountResponse.yaml"
+                $ref: "./schemas/createAccountResponse.yaml"
         "400":
           description: Bad Request
         "401":
