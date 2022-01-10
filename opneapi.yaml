@@ -250,6 +250,10 @@ paths:
       responses:
         "201":
           description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "./schemas/getCreateAccountResponse.yaml"
         "400":
           description: Bad Request
         "401":
