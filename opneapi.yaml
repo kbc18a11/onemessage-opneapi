@@ -238,7 +238,7 @@ paths:
         - line
       summary: LINEアカウントの登録
       description: LINEチャンネルトークン・シークレットを登録する
-      operationId: createLineAccountRequest
+      operationId: createLineAccount
       requestBody:
         required: true
         content:
