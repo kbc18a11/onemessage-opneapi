@@ -1,12 +1,12 @@
 type: object
-description: LINEアカウント情報
+description: LINEアカウント登録情報
 required:
-  - displayName
-  - pictureUrl
+  - accessToken
+  - channelSecretKey
 properties:
-  displayName:
-    description: アカウント名
+  channelToken:
+    description: LINEのチャンネルトークン
     type: string
-  pictureUrl:
-    description: アカウントアイコン画像
+  channelSecretKey:
+    description: LINEのアクセス用秘密鍵
     type: string
