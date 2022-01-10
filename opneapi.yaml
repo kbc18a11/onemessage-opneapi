@@ -14,6 +14,8 @@ tags:
     description: twitter関係
   - name: dm
     description: dm関係
+  - name: line
+    description: line関係
 paths:
   /login:
     post:
@@ -196,6 +198,47 @@ paths:
       summary: twitterアクセストークンを削除
       description: アクセストークンを削除
       operationId: deleteTwitterAccessToken
+      security:
+        - Authorization: []
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
+  /line/auth:
+    post:
+      tags:
+        - line
+      summary: LINEチャンネルトークンの登録
+      description: LINEチャンネルトークン・シークレットを取得する
+      operationId: createLineChannelToken
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./schemas/createLineChannelTokenRequest.yaml"
+      security:
+        - Authorization: []
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
+    delete:
+      tags:
+        - line
+      summary: LINEチャンネルトークンを削除
+      description: LINEチャンネルトークン・シークレットを削除
+      operationId: deleteLineChannelToken
       security:
         - Authorization: []
       responses:
