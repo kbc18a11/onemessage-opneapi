@@ -1,7 +1,7 @@
 type: object
 description: LINEアカウント登録情報
 required:
-  - accessToken
+  - channelToken
   - channelSecretKey
 properties:
   channelToken:
