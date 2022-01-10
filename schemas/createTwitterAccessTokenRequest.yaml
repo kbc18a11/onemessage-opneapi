@@ -2,6 +2,7 @@ type: object
 description: Twitterのアクセストークン
 required:
   - accessToken
+  - secretKey
 properties:
   accessToken:
     description: Twitterのアクセストークン
