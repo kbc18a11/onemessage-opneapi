@@ -1,0 +1,16 @@
+type: object
+description: Twitterのアカウント情報
+required:
+  - screenName
+  - profileImageURL
+  - accountUrl
+properties:
+  screenName:
+    description: アカウント名
+    type: string
+  profileImageURL:
+    description: アカウントアイコン画像
+    type: string
+  accountUrl:
+    description: アカウントページのURL
+    type: string
