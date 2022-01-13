@@ -1,13 +1,12 @@
 type: object
 description: LINEアカウント情報
 required:
-  - screenName
-  - profileImageURL
-  - accountUrl
+  - displayName
+  - pictureUrl
 properties:
-  screenName:
+  displayName:
     description: アカウント名
     type: string
-  profileImageURL:
+  pictureUrl:
     description: アカウントアイコン画像
     type: string

@@ -1,0 +1,21 @@
+type: object
+description: LINEの友達情報一覧
+required:
+  - friends
+  - total
+properties:
+  total:
+    description: 全ての友達情報数
+    type: integer
+  friends:
+    description: 友達情報一覧
+    type: array
+    items:
+      type: "object"
+      description: 友達情報
+      required:
+        - displayName
+      properties:
+        displayName:
+          description: アカウント名
+          type: string

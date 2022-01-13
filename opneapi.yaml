@@ -253,7 +253,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "./schemas/createAccountResponse.yaml"
+                $ref: "./schemas/createLineAccountResponse.yaml"
         "400":
           description: Bad Request
         "401":
@@ -277,6 +277,45 @@ paths:
           description: Unauthorized
         "404":
           description: Not Found
+        "500":
+          description: Internal Server Error
+  /line/account/friends:
+    get:
+      tags:
+        - line
+      summary: LINEアカウントの友達情報の取得
+      description: ユーザーのLINEアカウントの友達情報の取得
+      operationId: getLineAccountFriends
+      security:
+        - Authorization: []
+      parameters:
+        - name: offset
+          in: query
+          allowEmptyValue: true
+          description: |
+            フォロワーの取得開始位置
+            指定されない場合は、0から開始される
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          allowEmptyValue: true
+          description: |
+            フォロワーの取得数
+            指定されない場合は、最大量まで取得される
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "./schemas/getLineAccountFriendsResponse.yaml"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
         "500":
           description: Internal Server Error
 components:
