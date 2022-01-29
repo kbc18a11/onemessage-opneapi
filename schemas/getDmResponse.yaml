@@ -1,0 +1,22 @@
+type: object
+description: DM送信情報
+required:
+  - messages
+properties:
+  messages:
+    description: メッセージ送信履歴一覧
+    type: array
+    items:
+      description: メッセージ送信履歴情報
+      type: object
+      required:
+        - platformType
+        - addresses
+      properties:
+        message:
+          description: メッセージ送信履歴
+          type: string
+        postDateTime:
+          description: メッセージ送信日時
+          type: string
+          format: date-time

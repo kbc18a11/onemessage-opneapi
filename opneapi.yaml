@@ -107,6 +107,27 @@ paths:
           description: Unauthorized
         "500":
           description: Internal Server Error
+    get:
+      tags:
+        - dm
+      summary: dm送信履歴取得
+      description: dm送信履歴を取得
+      operationId: getDm
+      security:
+        - Authorization: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "./schemas/getDmResponse.yaml"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Internal Server Error
   /twitter/account:
     get:
       tags:
@@ -289,14 +310,6 @@ paths:
       security:
         - Authorization: []
       parameters:
-        - name: offset
-          in: query
-          allowEmptyValue: true
-          description: |
-            フォロワーの取得開始位置
-            指定されない場合は、0から開始される
-          schema:
-            type: integer
         - name: limit
           in: query
           allowEmptyValue: true

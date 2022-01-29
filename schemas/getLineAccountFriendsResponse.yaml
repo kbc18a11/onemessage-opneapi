@@ -14,8 +14,8 @@ properties:
       type: "object"
       description: 友達情報
       required:
-        - displayName
+        - id
       properties:
-        displayName:
-          description: アカウント名
+        id:
+          description: id
           type: string
